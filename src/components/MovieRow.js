@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import './MovieRow.css';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import AddIcon from '@material-ui/icons/Add';
 
 export default ({title, items}) => {
     const [scrollX, setScrollX] = useState(0);
+
+    const handBottomtArrow = () => {
+      
+    }
 
     const handLefetArrow = () => {  //quando ele clicar ira executar o botao da esquerda
       let x = scrollX + Math.round(window.innerWidth /2); /* vai pegar metade da tela que ira rolar mais o quando eu quero manda para o lado no botao entao se o meu x for maior do que zero que dizer que chegeui no limetepassou de 0 ele volta para zero */
@@ -22,11 +27,19 @@ export default ({title, items}) => {
 
       }
       setScrollX(x);
+
+      
+
     }
+
+
 
   return (
     <div className="movieRow">
-      <h2>{title}</h2>  
+      <h2>{title}</h2>
+      <div className="movieRow--bottom" onClick={handBottomtArrow}> 
+        <AddIcon style={{fontSize: 50}}/>
+      </div>  
       <div className="movieRow--left" onClick={handLefetArrow}> 
         <NavigateBeforeIcon style={{fontSize: 50}}/>
       </div>

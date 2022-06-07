@@ -27,6 +27,7 @@
   transform: scale(1); /* agora transformara em 100% */
 }
 
+
 .movieRow--left,
 .movieRow--right{ /* organizando os icones */
   position: absolute;
@@ -55,6 +56,16 @@
 .movieRow:hover .movieRow--left ,
 .movieRow:hover .movieRow--right{  /* quando passa o mouse ira aparecer  */
     opacity: 1;
+}
+
+.movieRow--bottom{
+  padding: 2px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  background-color: rgba(0, 0, 0, 0.6);
+  
 }
 
 @media (max-width:760px){/* para celular */

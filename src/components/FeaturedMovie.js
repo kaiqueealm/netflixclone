@@ -45,13 +45,13 @@ export default ({item}) => {
                 </div>
                 <div className="featured--buttons">
                   <a href={`/watch/${item.id}`} className="featured--watchbutton">▶ Assistir</a>
-                  <a href={`/list/add${item.id}`}className="featured--mylistbutton">+ Minha Lista</a>
+                  <a href=''className="featured--mylistbutton">  + Minha Lista</a>
                 </div>
                 <div  className="featured--genres">
                   <strong>Gêneros:</strong> {genres.join(', ')}
               </div>
           </div>
-      </div>
+      </div><a href=""></a>
     </section>
   );
 }
@@ -59,3 +59,5 @@ export default ({item}) => {
 
 //{item.number_of_seasons}temporadas{item.number_of_seasons !== 1} diferente de um aparece o caso contrario nao aparesa nada 
 //<div>{item.original_name}</div>
+
+///{`list/add${item.id}`}

@@ -28,6 +28,11 @@ export default {
   getHomeList: async () => {
     return[  // parebteses quadrado arrei
       {
+        slug: 'Minha Lista',
+        title: 'Minha Lista',
+        items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`) //wait
+      },
+      {
         slug: 'originals',
         title: 'Originais do Netflix',
         items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`) //wait
