@@ -1,0 +1,65 @@
+.movieRow{
+  margin-bottom: 30px;  
+}
+.movieRow h2 {
+  margin: 0px 0px 0px 30px; /* so um lado da tela vai mexer */
+}
+.movieRow--listarea{
+  overflow-x: hidden;/* tudo que passa na tela na horizontal vai ser cortado */
+  padding-left: 30px; /* alinha junto ao titulo */
+}
+
+.movieRow--list{
+  transition: all ease 0.5s;
+}
+.movieRow--item{
+  display: inline-block; /* vai fazer que um item fique ao lado do outro  */
+  width: 150px;
+  cursor: pointer;  /* quando passa em cima mostra o mouse */
+
+}
+.movieRow--item img{
+  width: 100%;  /*ela tera 100 porcento da area disponivel 150px*/
+  transform: scale(0.9);  /* vai ter uma separação entre as imagnes de 0.9 proporcional aos 100% vai diminuir para 90% */
+  transition: all ease 0.2s;
+}
+.movieRow--item img:hover{
+  transform: scale(1); /* agora transformara em 100% */
+}
+
+.movieRow--left,
+.movieRow--right{ /* organizando os icones */
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  overflow: hidden; /* nao vai deixa os espaço extra atrapalha o resto da pagina */
+  cursor: pointer;
+  opacity: 0; /*  ira sumir e aparecer so quando eu quiser */
+  transition: all ease 0.5s;
+}
+
+.movieRow--left{
+  left: 0;
+
+}
+
+.movieRow--right{
+  right: 0;
+}
+
+.movieRow:hover .movieRow--left ,
+.movieRow:hover .movieRow--right{  /* quando passa o mouse ira aparecer  */
+    opacity: 1;
+}
+
+@media (max-width:760px){/* para celular */
+    .movieRow--left,
+    .movieRow--right{
+      opacity: 1;
+    }
+}  
