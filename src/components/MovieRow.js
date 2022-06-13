@@ -6,6 +6,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 export default ({title, items}) => {
     const [scrollX, setScrollX] = useState(0);
+    const localStorageAddIcon = localStorage.useState('AddIcon')
 
     const handBottomtArrow = () => {
       
