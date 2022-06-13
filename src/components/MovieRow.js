@@ -6,11 +6,11 @@ import AddIcon from '@material-ui/icons/Add';
 
 export default ({title, items}) => {
     const [scrollX, setScrollX] = useState(0);
-    const localStorageAddIcon = localStorage.useState('AddIcon')
+   
 
     const handBottomtArrow = () => {
-      
-    }
+
+      }
 
     const handLefetArrow = () => {  //quando ele clicar ira executar o botao da esquerda
       let x = scrollX + Math.round(window.innerWidth /2); /* vai pegar metade da tela que ira rolar mais o quando eu quero manda para o lado no botao entao se o meu x for maior do que zero que dizer que chegeui no limetepassou de 0 ele volta para zero */
@@ -62,3 +62,14 @@ export default ({title, items}) => {
     </div>
   );
 }
+
+
+//<div className="movieRow--bottom" onClick={handBottomtArrow}> 
+//<AddIcon style={{fontSize: 50}}/>
+//</div>  
+
+//const handBottomtArrow = () => {
+      
+//}
+
+// const localStorageAddIcon = localStorage.useState('AddIcon')
