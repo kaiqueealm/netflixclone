@@ -4,11 +4,11 @@ import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
-import useTheme from './components/hooks/movieList';
+import useTheme from './components/hooks/useTheme';
 
 export default () => {
 
-  const [movieList, setMovieList] = useState([]);
+  const [movieList, setMovieList ] = useState([]);
   const [featuredData, setFeatureData] = useState(null)//para que utiliza useState interagir variavel do progama com o formulario
   const [blackHeader, setBlackHeader] = useState(false)
 
