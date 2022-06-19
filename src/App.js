@@ -4,12 +4,18 @@ import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+import useTheme from './components/hooks/movieList';
 
 export default () => {
 
   const [movieList, setMovieList] = useState([]);
-  const [featuredData, setFeatureData] = useState(null)
+  const [featuredData, setFeatureData] = useState(null)//para que utiliza useState interagir variavel do progama com o formulario
   const [blackHeader, setBlackHeader] = useState(false)
+
+
+
+
+
 
   useEffect(()=>{
     const loadAll = async () => {
@@ -36,6 +42,7 @@ export default () => {
         setBlackHeader (false)
       }
     }
+      
 
     window.addEventListener('scroll', scrollListener);
 
@@ -44,7 +51,9 @@ export default () => {
     }
   }, []);
 
+
   return (
+    
     <div className='page'>
 
       <Header black={blackHeader}/>
@@ -52,6 +61,7 @@ export default () => {
     {featuredData &&
       <FeaturedMovie item={featuredData} />
     }
+
 
       <section className='lists'>
         {movieList.map((item, key)=> (
@@ -71,7 +81,13 @@ export default () => {
         </div>
       }
     </div>
+
+
   );
+
+
+
+
 }
 
 

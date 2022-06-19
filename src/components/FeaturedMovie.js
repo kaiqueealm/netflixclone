@@ -51,7 +51,7 @@ export default ({item}) => {
                   <strong>Gêneros:</strong> {genres.join(', ')}
               </div>
           </div>
-      </div><a href=""></a>
+      </div>
     </section>
   );
 }
